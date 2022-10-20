@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  pyclient:
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - ganache
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    command: ganache-cli -h 0.0.0.0 --accounts 51
+    ports:
+      - 8545:8545
