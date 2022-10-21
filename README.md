@@ -6,23 +6,30 @@ ReceivablesSum is a prototype of a system that allows the confirmation of accoun
 
 Each debtor will divide their balance outstanding to the entity into shares, using Shamir (1979), and distributes those shares to the other debtors of the entity. These shares are then aggregated and uploaded to a blockchain. A smart contract aggregates the shares and the **total** balance can be reconstructed by Lagrange interpolating the resulting polynomial.
 
-email john.mccallig@ucd.ie for a copy of the paper on which this software is based.
+Email john.mccallig@ucd.ie for a copy of the paper on which this software is based.
 
 You can run the software as follows:
 
-## On github.com using docker-compose
-
-Go to the **Actions** menu in this repository. Select **run_receivables_sum_test**. gighub will create an ubuntu VM and run the python client and test blockchain as containers within a docker-compose network. After a few minutes, output should be available through the Actions menu.
-
-This option does not involved downlaoding any files or applications to your computer.
-
 ## Locally using docker-compose
 
-Clone the repistory to a local directory. Install docker ([](https://www.docker.com/)) and docker-compose.
+Clone the repistory to a local directory.
+```
+% git clone https://github.com/johnmccallig/receivablesSum
+```
+
+Install [docker](https://www.docker.com/) and docker-compose.
 
 In a terminal, make sure you are in the cloned directory. Issue the following command
 
-```% docker-compose up```
+```
+% docker-compose up
+```
+
+When the application has terminated you will need to press ctrl-c or issue the following command in aniother terminal
+
+```
+% docker-compose down
+```
 
 ## Full local installation
 
@@ -31,9 +38,9 @@ python 3 (tested with 3.7.7)
 node.js and npm (https://nodejs.org/en/download/)
 ganache-cli (use npm to install - % npm install -g ganache-cli)
 
-The [web3](https://web3py.readthedocs.io/en/v5/)python package is required in the python environment.
+The [web3](https://web3py.readthedocs.io/en/v5/) python package is required in the python environment.
 
-The solidity smart contract is compiled with [remix] (https://remix.ethereum.org/) solc version 0.4.26
+The solidity smart contract is compiled with [remix](https://remix.ethereum.org/) solc version 0.4.26
 The compiled ABI and bytecode is hard-coded into the python client.
 
 Start ganache with n+1 accounts in a terminal window
@@ -48,7 +55,7 @@ In the python file Receivables_Sum_Client_Test.py make sure the ganache url is s
 ganache_url = 'HTTP://127.0.0.1:8545'
 ```
 
-In another window execute the python client code - typical run given below.
+In another window execute the python client code - sample run given below.
 
 The example code is set to distribute shares to 20 debtors.
 
