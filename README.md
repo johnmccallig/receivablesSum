@@ -4,7 +4,7 @@
 
 ReceivablesSum is a prototype of a system that allows the confirmation of accounting liabilities between an entity and the entities that owe it money.
 
-Each debtor will divide their balance outstanding to the entity into shares, using Shamir (1979), and distributes those shares to the other debtors of the entity. These shares are then aggregated and uploaded to a blockchain. A smart contract aggregates the shares and the **total** balance can be reconstructed by Lagrange interpolating the resulting polynomial.
+Each debtor will divide their balance outstanding to the entity into shares, using Shamir (1979), and distribute those shares to the other debtors of the entity. These shares are then aggregated and uploaded to a blockchain. A smart contract aggregates the shares and the **total** balance can be reconstructed by Lagrange interpolating the resulting polynomial.
 
 Email john.mccallig@ucd.ie for a copy of the paper on which this software is based.
 
@@ -12,7 +12,7 @@ You can run the software as follows:
 
 ## Locally using docker-compose
 
-Clone the repistory to a local directory.
+Clone the repository to a local directory.
 ```
 % git clone https://github.com/johnmccallig/receivablesSum
 ```
@@ -25,7 +25,7 @@ In a terminal, make sure you are in the cloned directory. Issue the following co
 % docker-compose up
 ```
 
-When the application has terminated you will need to press ctrl-c or issue the following command in aniother terminal
+When the application has terminated you will need to press ctrl-c or issue the following command in another terminal
 
 ```
 % docker-compose down
