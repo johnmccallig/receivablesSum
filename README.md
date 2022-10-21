@@ -26,23 +26,25 @@ In a terminal, make sure you are in the cloned directory. Issue the following co
 
 ## Full local installation
 
-The following software must be installed 2
+The following software must be installed
 python 3 (tested with 3.7.7)
 node.js and npm (https://nodejs.org/en/download/)
 ganache-cli (use npm to install - % npm install -g ganache-cli)
 
-The web3 [](https://web3py.readthedocs.io/en/v5/)python package is required in the python environment.
+The [web3](https://web3py.readthedocs.io/en/v5/)python package is required in the python environment.
 
-The solidity smart contract is compiled with remix (https://remix.ethereum.org/) solc version 0.4.26
+The solidity smart contract is compiled with [remix] (https://remix.ethereum.org/) solc version 0.4.26
 The compiled ABI and bytecode is hard-coded into the python client.
 
 Start ganache with n+1 accounts in a terminal window
+
 ```% ganache-cli --accounts 51```
 
 In another window execute the python client code - typical run given below.
+
 The example code is set to distribute shares to 20 debtors.
 
-```% python Receivable Sum Client Test.py```
+```% python Receivable_Sum_Client_Test.py```
 
 ## Sample run
 
@@ -91,4 +93,4 @@ Secret recovered from shares downloaded is 20729562
 Sum of receivables = 20729562 is equal to  20729562
 Test Suceeded
 Secret recovered from minimum number of shares 20729562
-%```
+%
