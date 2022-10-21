@@ -42,7 +42,8 @@ Start ganache with n+1 accounts in a terminal window
 
 In the python file Receivables_Sum_Client_Test.py make sure the ganache url is set to local.
 
-```# ganache_url = 'HTTP://receivablessum-ganache-1:8545'
+```
+# ganache_url = 'HTTP://receivablessum-ganache-1:8545'
 # Uncomment next line if running ganache locally
 ganache_url = 'HTTP://127.0.0.1:8545'
 ```
