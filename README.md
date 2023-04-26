@@ -34,11 +34,11 @@ When the application has terminated you will need to press ctrl-c or issue the f
 ## Full local installation
 
 The following software must be installed
-python 3 (tested with 3.7.7)
+python 3 (tested with 3.9)
 node.js and npm (https://nodejs.org/en/download/)
 ganache-cli (use npm to install - % npm install -g ganache-cli)
 
-The [web3](https://web3py.readthedocs.io/en/v5/) python package is required in the python environment.
+The [web3](https://web3py.readthedocs.io/en/v5/) python package version 5.12.0 is required in the python environment.
 
 The solidity smart contract is compiled with [remix](https://remix.ethereum.org/) solc version 0.4.26
 The compiled ABI and bytecode is hard-coded into the python client.
